@@ -1,0 +1,9 @@
+export const menu_list = [
+  { menu_name: "Salad", menu_image: { five } },
+  { menu_name: "Salad", menu_image: { five } },
+  { menu_name: "Salad", menu_image: { five } },
+  { menu_name: "Salad", menu_image: { five } },
+  { menu_name: "Salad", menu_image: { five } },
+  { menu_name: "Salad", menu_image: { five } },
+  { menu_name: "Salad", menu_image: { five } },
+];
