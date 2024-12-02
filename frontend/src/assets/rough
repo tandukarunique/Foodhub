@@ -1,9 +1,14 @@
 export const menu_list = [
-  { menu_name: "Salad", menu_image: { five } },
-  { menu_name: "Salad", menu_image: { five } },
-  { menu_name: "Salad", menu_image: { five } },
-  { menu_name: "Salad", menu_image: { five } },
-  { menu_name: "Salad", menu_image: { five } },
-  { menu_name: "Salad", menu_image: { five } },
-  { menu_name: "Salad", menu_image: { five } },
+  { menu_name: "Piza", menu_image: one },
+  { menu_name: "Momo", menu_image: nine }, // Corrected to use an imported asset
+  { menu_name: "Jhol Momo", menu_image: ten },
+  { menu_name: "Roll", menu_image: four },
+  { menu_name: "Burger", menu_image: five },
+  { menu_name: "Steak", menu_image: six },
+  { menu_name: "Fry Momo", menu_image: fifteen },
+  { menu_name: "Khana set", menu_image: eleven },
+  { menu_name: "Momo", menu_image: nine },
+  { menu_name: "sandwich", menu_image: sandwich },
+  { menu_name: "MonsterMeal", menu_image: MonsterMeal },
+  { menu_name: "Pastries", menu_image: Pastries },
 ];
