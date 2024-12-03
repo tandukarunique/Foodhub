@@ -44,10 +44,25 @@ import Roast_beef from "./assests/Roast_beef.jpg";
 import Seafood_Sandwich from "./assests/Seafood_Sandwich.jpg";
 import Egg_Sandwich from "./assests/Egg_Sandwich.jpg";
 import Chicken_Sandwich from "./assests/Chicken_Sandwich.jpg";
-import Turkey_burger from "./assests/Turkey_burger.jpg.webp";
 import veg_khana_set from "./assests/veg_khana_set.jpg";
 import khanaset from "./assests/khanaset.jpg";
 import mutton_khana from "./assests/mutton_khana.jpg";
+import Turkey_burger from "./assests/Turkey_burger.jpg.webp";
+
+import Egg_noodles from './assests/Egg_noodles.webp'
+import bowtiepasta from './assests/bowtiepasta.webp';
+import Bucatini_Pasta from './assests/Bucatini_Pasta.webp'
+import Ditalini_Pasta from './assests/Ditalini_Pasta.webp'
+import beyond_meat_burger from './assests/burger.jpg.webp'
+import hatch_chile_smash_burger from './assests/hatch_chile_smash_burger.webp'
+import nacho_burgers from './assests/nacho_burgers.webp'
+import ceaser_salad from './assests/ceaser_salad.webp'
+import greek_salad from './assests/greek_salad.webp'
+import composed_salad from './assests/composed_salad.webp'
+import leady_green_salad from './assests/leady_green_salad.webp'
+
+
+
 
 export const assests = {
   basketicon,
@@ -97,21 +112,29 @@ export const assests = {
   veg_khana_set,
   khanaset,
   mutton_khana,
+  Egg_noodles,
+  bowtiepasta,
+  Bucatini_Pasta,
+  Ditalini_Pasta,
+  beyond_meat_burger,
+  hatch_chile_smash_burger,
+  nacho_burgers,
+  ceaser_salad,
+  greek_salad,
+  composed_salad,
+  leady_green_salad,
 };
 
 export const menu_list = [
   { menu_name: "Pizza", menu_image: one },
   { menu_name: "Momo", menu_image: nine },
-  { menu_name: "Jhol Momo", menu_image: ten },
   { menu_name: "Roll", menu_image: four },
   { menu_name: "Burger", menu_image: five },
-  { menu_name: "Steak", menu_image: six },
-  { menu_name: "Fry Momo", menu_image: fifteen },
+  { menu_name: "salad", menu_image: ceaser_salad },
   { menu_name: "Khana set", menu_image: eleven },
   { menu_name: "Sandwich", menu_image: sandwich },
   { menu_name: "MonsterMeal", menu_image: MonsterMeal },
   { menu_name: "bakery", menu_image: Pastries },
-  { menu_name: "Naran Momo", menu_image: naranmomo },
 ];
 
 export const food_list = [
@@ -161,7 +184,7 @@ export const food_list = [
     image: six,
     price: "300",
     description: "Tender and perfectly grilled steak.",
-    category: "non-veg",
+    category: "steak",
   },
   {
     _id: "7",
@@ -177,7 +200,7 @@ export const food_list = [
     image: eleven,
     price: "650",
     description: "A wholesome meal with rice, lentils, and curry.",
-    category: "non-veg",
+    category: "chicken khana",
   },
   {
     _id: "9",
@@ -185,7 +208,7 @@ export const food_list = [
     image: sandwich,
     price: "400",
     description: "A hearty sandwich with fresh fillings.",
-    category: "veg",
+    category: "sandwich",
   },
   {
     _id: "10",
@@ -193,7 +216,7 @@ export const food_list = [
     image: MonsterMeal,
     price: "550",
     description: "A combo meal with everything you crave.",
-    category: "non-veg",
+    category: "MonsterMeal",
   },
   {
     _id: "11",
@@ -201,11 +224,11 @@ export const food_list = [
     image: Pastries,
     price: "110",
     description: "Sweet pastries with delightful flavors.",
-    category: "veg",
+    category: "bakery",
   },
   {
     _id: "12",
-    name: "Naran Momo",
+    name: "Naran dai ko Momo",
     image: naranmomo,
     price: "185",
     description: "Special momos made with unique spices.",
@@ -214,7 +237,7 @@ export const food_list = [
 
   {
     _id: "13",
-    name: "Bakery",
+    name: "Straberry cake",
     image: Bakery_one,
     price: "150",
     description: "Freshly baked bread with a soft texture.",
@@ -222,7 +245,7 @@ export const food_list = [
   },
   {
     _id: "14",
-    name: "Bakery Two",
+    name: "American cookies",
     image: bakery_two,
     price: "200",
     description: "Delicious pastries with rich flavors.",
@@ -230,7 +253,7 @@ export const food_list = [
   },
   {
     _id: "15",
-    name: "Bakery Three",
+    name: "Chocolate cookies",
     image: bakery_three,
     price: "120",
     description: "Savory buns with a variety of fillings.",
@@ -238,7 +261,7 @@ export const food_list = [
   },
   {
     _id: "16",
-    name: "Bakery Four",
+    name: "Blueberry cake",
     image: bakery_four,
     price: "180",
     description: "Sweet muffins perfect for a quick snack.",
@@ -246,7 +269,7 @@ export const food_list = [
   },
   {
     _id: "17",
-    name: "Bakery Five",
+    name: "Breads",
     image: bakery_five,
     price: "250",
     description: "Rich and creamy cakes for special occasions.",
@@ -254,7 +277,7 @@ export const food_list = [
   },
   {
     _id: "18",
-    name: "Bakery Six",
+    name: "Cream Doughnuts",
     image: bakery_six,
     price: "300",
     description: "Exquisite pastries with artisan designs.",
@@ -404,4 +427,93 @@ export const food_list = [
     description: "A special meal set with tender mutton curry.",
     category: "Khana set",
   },
+  {
+    _id: "37",
+    name: "Egg Noodles",
+    image: Egg_noodles,
+    price: "150",
+    description: "Classic egg noodles with a rich and savory taste, perfect for a quick meal.",
+    category: "noodles",
+  },
+  {
+    _id: "38",
+    name: "Bowtie Pasta",
+    image: bowtiepasta,
+    price: "200",
+    description: "Elegant bowtie-shaped pasta, ideal for creamy and saucy dishes.",
+    category: "pasta",
+  },
+  {
+    _id: "39",
+    name: "Bucatini Pasta",
+    image: Bucatini_Pasta,
+    price: "220",
+    description: "Thick, hollow pasta perfect for soaking up rich sauces.",
+    category: "pasta",
+  },
+  {
+    _id: "40",
+    name: "Ditalini Pasta",
+    image: Ditalini_Pasta,
+    price: "180",
+    description: "Small, tube-shaped pasta ideal for soups and light dishes.",
+    category: "pasta",
+  },
+  {
+    _id: "41",
+    name: "Beyond Meat Burger",
+    image: beyond_meat_burger,
+    price: "350",
+    description: "Plant-based burger that’s juicy, delicious, and perfect for vegetarians.",
+    category: "burger",
+  },
+  {
+    _id: "42",
+    name: "Hatch Chile Smash Burger",
+    image: hatch_chile_smash_burger,
+    price: "400",
+    description: "A spicy burger with smoky Hatch chiles and a juicy smash patty.",
+    category: "burger",
+  },
+  {
+    _id: "43",
+    name: "Nacho Burgers",
+    image: nacho_burgers,
+    price: "380",
+    description: "Crunchy and cheesy burgers topped with flavorful nachos.",
+    category: "burger",
+  },
+  {
+    _id: "44",
+    name: "Caesar Salad",
+    image: ceaser_salad,
+    price: "250",
+    description: "Crispy greens tossed with creamy Caesar dressing, croutons, and Parmesan cheese.",
+    category: "salad",
+  },
+  {
+    _id: "45",
+    name: "Greek Salad",
+    image: greek_salad,
+    price: "240",
+    description: "Fresh salad with cucumbers, tomatoes, olives, and feta cheese.",
+    category: "salad",
+  },
+  {
+    _id: "46",
+    name: "Composed Salad",
+    image: composed_salad,
+    price: "300",
+    description: "Artfully arranged salad with a mix of seasonal vegetables and proteins.",
+    category: "salad",
+  },
+  {
+    _id: "47",
+    name: "Leafy Green Salad",
+    image: leady_green_salad,
+    price: "220",
+    description: "Simple and refreshing leafy greens served with a light vinaigrette.",
+    category: "salad",
+  },
+  
 ];
