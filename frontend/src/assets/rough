@@ -1,14 +1,24 @@
-export const menu_list = [
-  { menu_name: "Piza", menu_image: one },
-  { menu_name: "Momo", menu_image: nine }, // Corrected to use an imported asset
-  { menu_name: "Jhol Momo", menu_image: ten },
-  { menu_name: "Roll", menu_image: four },
-  { menu_name: "Burger", menu_image: five },
-  { menu_name: "Steak", menu_image: six },
-  { menu_name: "Fry Momo", menu_image: fifteen },
-  { menu_name: "Khana set", menu_image: eleven },
-  { menu_name: "Momo", menu_image: nine },
-  { menu_name: "sandwich", menu_image: sandwich },
-  { menu_name: "MonsterMeal", menu_image: MonsterMeal },
-  { menu_name: "Pastries", menu_image: Pastries },
-];
+import Bakery_one from './assests/Bakery_one.jpg'
+import bakery_two from './assests/bakery_two.png'
+import bakery_three from './assests/bakery_three.jpg'
+import bakery_four from './assests/bakery_four.jpg'
+import bakery_five from './assests/bakery_five.jpg'
+import bakery_six from './assests/bakery_six.jpg'
+import california_pizza from './assests/california_pizza.webp'
+import chicago_pizza from './assests/chicago_pizza.webp'
+import greek_pizza from './assests/greek_pizza.webp'
+import new_york_style_pizza from './assests/new_york_style_pizza.jpg'
+import neapolitian_pizza from './assests/neapolitan_pizza.jpg'
+import chicken_roll from './assests/Chicken_roll.png'
+import Paneer_roll from './assests/Paneer_roll.png'
+import veg_roll from './assests/veg_roll.png'
+import Mutton_roll from './assests/Mutton_roll.png'
+import malai_tikka_roll from './assests/malai_tikka_roll.png'
+import Roast_beef from './assests/Roast_beef.jpg'
+import Seafood_Sandwich from './assests/Seafood_Sandwich.jpg'
+import Egg_Sandwich from './assests/Egg_Sandwich.jpg'
+import Chicken_Sandwich from './assests/Chicken_Sandwich.jpg'
+import Turkey_burger from './assests/Turkey_burger.jpg.webp'
+import veg_khana_set from './assests/veg_khana_set.jpg'
+import khanaset from './assests/khanaset.jpg'
+import mutton_khana from './assests/mutton_khana.jpg'
