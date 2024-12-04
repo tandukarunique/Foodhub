@@ -10,7 +10,7 @@ const Header = () => {
           Craving your favorite meals but don’t feel like stepping out? Our food
           delivery app brings the flavors you love straight to your doorstep!
           Explore a wide variety of cuisines, from local favorites to
-          international delights, all in one app.{" "}
+          international delights, all in one app.
         </p>
         <button>View Menu</button>
       </div>

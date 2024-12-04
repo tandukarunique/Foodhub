@@ -61,6 +61,9 @@ import greek_salad from './assests/greek_salad.webp'
 import composed_salad from './assests/composed_salad.webp'
 import leady_green_salad from './assests/leady_green_salad.webp'
 
+import playstore from './assests/playstore.png'
+import appstore from './assests/appstore.png'
+
 
 
 
@@ -123,6 +126,8 @@ export const assests = {
   greek_salad,
   composed_salad,
   leady_green_salad,
+  playstore,
+  appstore,
 };
 
 export const menu_list = [
