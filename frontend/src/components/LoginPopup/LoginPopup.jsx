@@ -16,29 +16,32 @@ const LoginPopup = ({ setShowLogin }) => {
           />
         </div>
         <div className="login-popup-inputs">
-          {/* Show Name input only for Sign up */}
-          {currState === "Sign up" && (
+          {currState === "Login" ? (
+            <></>
+          ) : (
             <input type="text" placeholder="Your Name" required />
           )}
-          <input type="email" placeholder="Your Email" required />
-          <input type="password" placeholder="Input password" required />
+          <input type="email" placeholder="Your email" required />
+          <input type="password" placeholder="password" required />
         </div>
-        <button type="submit">
-          {currState === "Sign up" ? "Create Account" : "Log in"}
+        <button>
+          {currState === "Sign up" ? "Create an account" : "Login"}
         </button>
-        <p className="toggle-state">
-          {currState === "Sign up" ? (
-            <>
-              Already have an account?{" "}
-              <span onClick={() => setCurrState("Log in")}>Log in</span>
-            </>
-          ) : (
-            <>
-              Don't have an account?{" "}
-              <span onClick={() => setCurrState("Sign up")}>Sign up</span>
-            </>
-          )}
-        </p>
+        <div className="login-popup-condition">
+          <input type="checkbox" required />
+          <p>By continuing, I agree to the terms of use & peivacy policy.</p>
+        </div>
+        {currState === "Login" ? (
+          <p>
+            Create a new account?{" "}
+            <span onClick={() => setCurrState("Sign up")}>Click here</span>
+          </p>
+        ) : (
+          <p>
+            Already have an account?{" "}
+            <span onClick={() => setCurrState("Login")}>Login here</span>
+          </p>
+        )}
       </form>
     </div>
   );
