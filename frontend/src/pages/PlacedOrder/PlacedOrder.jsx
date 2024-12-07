@@ -30,15 +30,19 @@ const PlacedOrder = () => {
             <hr />
             <div className="cart-total-details">
               <p>Delivery charge</p>
-              <p>Rs.{100}</p>
+              <p>Rs.{getTotalCartAmount() === 0 ? 0 : 100}</p>
             </div>
             <hr />
             <div className="cart-total-details">
               <b>Total :</b>
-              <b>Rs.{getTotalCartAmount() + 100}</b>
+              <b>
+                Rs.{getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 100}
+              </b>
             </div>
           </div>
-          <button>Proceed to payment</button>
+          <button onClick={() => navigate("/order")}>
+            Proceed to checkout
+          </button>
         </div>
       </div>
     </form>

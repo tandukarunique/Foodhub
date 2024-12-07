@@ -6,12 +6,16 @@
   font-family: outfit;
   scroll-behavior: smooth;
 }
+
 body {
   min-height: 100vh;
 }
 a {
   text-decoration: none;
   color: inherit;
+}
+element.style {
+  margin: 40px;
 }
 .app {
   width: 85%;
