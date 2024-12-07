@@ -1,14 +1,24 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./Navbar.css";
 import logo from "../../assets/assests/logo.png";
 import searchicon from "../../assets/assests/searchicon.jpg";
-import basketicon from "../../assets/assests/basketicon.png";
 import { Link } from "react-router-dom";
-const Navbar = ({setShowLogin}) => {
-  const [menu, setmenu] = useState("home");
+
+import { CiShoppingBasket } from "react-icons/ci";
+import { StoreContext } from "../../context/StoreContext";
+const Navbar = ({ setShowLogin }) => {
+  const [menu, setmenu] = useState("menu");
+  const {getTotalCartAmount} = useContext(StoreContext)
   return (
     <div className="navbar">
-      <img src={logo} style={{ height: "200px", width: "230px" }} alt="logo" />
+      <Link to="/">
+        {" "}
+        <img
+          src={logo}
+          style={{ height: "200px", width: "230px" }}
+          alt="logo"
+        />
+      </Link>
       <ul className="navbar-menu">
         <Link
           to="/"
@@ -46,14 +56,20 @@ const Navbar = ({setShowLogin}) => {
           alt="searchicon"
         />
         <div className="navbar-search-icon">
-          <img
-            src={basketicon}
-            style={{ height: "30px", width: "auto" }}
-            alt="basketicon"
-          />
-          <div className="dot"></div>
+          <Link to="./cart">
+            {" "}
+            <CiShoppingBasket
+              style={{
+                height: "35px",
+                width: "auto",
+                display: "flex",
+                marginRight: "4px",
+              }}
+            />
+          </Link>
+          <div className={getTotalCartAmount()===0?"":"dot"}></div>
         </div>
-        <button onClick={()=>setShowLogin(true)}>Sign in</button>
+        <button onClick={() => setShowLogin(true)}>Sign in</button>
       </div>
     </div>
   );
