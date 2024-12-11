@@ -15,15 +15,35 @@ const addFood = async (req, res) => {
     image: image_filename,
   });
 
-  try{
+  try {
     await food.save();
-    res.json({success:true,message:"Food added"})
-  }
-  catch(error){
-    console.log(error)
-    res.json({success:false,message:"error"})
-
+    res.json({ success: true, message: "Food added" });
+  } catch (error) {
+    console.log(error);
+    res.json({ success: false, message: "error" });
   }
 };
 
-export { addFood };
+//All food list
+
+const listFood = async (req, res) => {
+  try {
+    const foods = await foodModel.find({});
+    res.json({ success: true, data: foods });
+  } catch (error) {
+    console.log("error");
+    res.json({ success: false, message: "Error" });
+  }
+};
+
+//remove food item
+const removeFood = async (req,res) => {
+try {
+  const food = await foodModel.findById()
+} catch (error) {
+  
+}
+
+}
+
+export { addFood, listFood ,removeFood};

@@ -3,7 +3,6 @@ import cors from "cors";
 import { connectDB } from "./config/db.js";
 import foodRouter from "./routes/foodRoute.js";
 
-
 //app config
 const app = express();
 const port = 4000;
@@ -16,8 +15,8 @@ app.use(cors());
 connectDB();
 
 //Api endpoints
-app.use("/api/food",foodRouter);
-
+app.use("/api/food", foodRouter);
+app.use("/images", express.static("uploads"));
 
 //request data from server lai use huncha
 app.get("/", (req, res) => {
@@ -27,5 +26,3 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
   console.log(`server started on http://localhost:${port}`);
 });
-
-
