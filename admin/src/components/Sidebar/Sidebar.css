@@ -1,0 +1,36 @@
+/* src/components/Sidebar/Sidebar.css */
+.sidebar {
+  width: 40vh;
+  background-color: #f4f4f4;
+  height: 100vh;
+  padding: 35px ;
+}
+
+.sidebar-options {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-option {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.sidebar-option:hover {
+  background-color: #ddd;
+}
+
+.sidebar-option p {
+  margin-left: 10px;
+}
+
+/* Active link styles */
+.sidebar-option.active {
+  background-color: #007bff;
+  color: white;
+}

@@ -1,0 +1,13 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 3%;
+}
+.navbar .logo {
+  width: max(7%, 70px);
+}
+.navbar svg {
+  width: 40px;
+  font-size: 40px;
+}
