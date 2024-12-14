@@ -8,15 +8,15 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="sidebar-options">
-        <NavLink to="/add" className="sidebar-option">
+        <NavLink to="/Add" className="sidebar-option">
           <IoMdAddCircleOutline />
           <p>Add Items</p>
         </NavLink>
-        <NavLink to="/list" className="sidebar-option">
+        <NavLink to="/List" className="sidebar-option">
           <FaList />
           <p>List Items</p>
         </NavLink>
-        <NavLink to="/orders" className="sidebar-option">
+        <NavLink to="/Orders" className="sidebar-option">
           <FaListAlt />
 
           <p>Orders Items</p>

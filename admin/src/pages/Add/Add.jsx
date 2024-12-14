@@ -2,9 +2,7 @@ import React from "react";
 import "./Add.css";
 
 const Add = () => {
-  return <div>
-    <p>khoiho</p>
-  </div>;
+  return <div className="hhh" style={{color:"red"}}>Adddddd</div>;
 };
 
 export default Add;

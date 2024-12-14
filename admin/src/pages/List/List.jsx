@@ -2,7 +2,7 @@ import React from "react";
 import "./List.css";
 
 const List = () => {
-  return <div>Hello, list bhayo!</div>; // Add Hello text here
+  return <div>Hello, list bhayo!</div>; 
 };
 
 export default List;
