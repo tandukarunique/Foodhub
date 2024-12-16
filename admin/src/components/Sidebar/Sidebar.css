@@ -1,9 +1,10 @@
 /* src/components/Sidebar/Sidebar.css */
 .sidebar {
-  width: 40vh;
+  width: 20%;
   background-color: #f4f4f4;
   height: 100vh;
-  padding: 35px ;
+  padding: 40px;
+  overflow-y: auto;
 }
 
 .sidebar-options {
@@ -26,7 +27,7 @@
 }
 
 .sidebar-option p {
-  margin-left: 10px;
+  margin-left: 30px;
 }
 
 /* Active link styles */

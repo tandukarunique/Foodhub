@@ -1,10 +1,10 @@
 import React from "react";
 import Sidebar from "./components/Sidebar/Sidebar";
-import Navbar from "./components/Navbar/Navbar";
 import { Route, Routes } from "react-router-dom";
 import Add from "./pages/Add/Add.jsx";
 import List from "./pages/List/List.jsx";
 import Orders from "./pages/Orders/Orders.jsx";
+import Navbar from "./components/Navbar/Navbar.jsx";
 
 const App = () => {
   return (
@@ -13,6 +13,7 @@ const App = () => {
       <hr />
       <div className="app-content">
         <Sidebar />
+
         <Routes>
           <Route path="/Add" element={<Add />} />
           <Route path="/List" element={<List />} />
