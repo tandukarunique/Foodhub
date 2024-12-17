@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import "./Add.css";
 import { assests } from "../../assets/assests";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 const Add = () => {
   const url = "http://localhost:4000";
-  const [image, setImage] = useState(false);
+  const [image, setImage] = useState("");
   const [data, setData] = useState({
     name: "",
     description: "",
@@ -28,6 +29,19 @@ const Add = () => {
     formData.append("category", data.category);
     formData.append("image", image);
     const response = await axios.post(`${url}/api/food/add`, formData);
+
+    if (response.data.success) {
+      setData({
+        name: "",
+        description: "",
+        price: "",
+        category: "Bakeries",
+      });
+      setImage(false);
+      toast.success(response.data.message);
+    } else {
+      toast.error(response.data.message);
+    }
   };
 
   return (
@@ -81,7 +95,7 @@ const Add = () => {
               <option value="Momo">Momo</option>
               <option value="Khana set">Khana Set</option>
               <option value="Sandwich">Sandwich</option>
-              <option value="Burger">Burger</option>
+              <option value="Pizza">Pizza</option>
               <option value="Bakeries">Bakeries</option>
             </select>
           </div>
