@@ -28,6 +28,8 @@ hr {
   gap: 10px;
 }
 .app-content {
-  display: flex
-;
+  display: flex;
+}
+.cursor {
+  cursor: pointer;
 }
