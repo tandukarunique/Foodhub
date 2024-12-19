@@ -4,8 +4,7 @@ import { assests } from "../../assets/assests";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const Add = () => {
-  const url = "http://localhost:4000";
+const Add = ({ url }) => {
   const [image, setImage] = useState("");
   const [data, setData] = useState({
     name: "",
@@ -97,6 +96,7 @@ const Add = () => {
               <option value="Sandwich">Sandwich</option>
               <option value="Pizza">Pizza</option>
               <option value="Bakeries">Bakeries</option>
+              <option value="Monster Meal">Monster Meal</option>
             </select>
           </div>
           <div className="add-price-flex-col">
