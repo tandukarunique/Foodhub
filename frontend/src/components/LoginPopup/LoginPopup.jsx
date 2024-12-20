@@ -4,6 +4,11 @@ import { ImCross } from "react-icons/im";
 
 const LoginPopup = ({ setShowLogin }) => {
   const [currState, setCurrState] = useState("Log in"); // Default state is "Log in"
+  const [data,setData] = useState({
+    name:"",
+    email:"",
+    password:""
+  })
 
   return (
     <div className="login-popup">
