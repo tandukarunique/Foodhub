@@ -7,6 +7,8 @@ export const StoreContext = createContext(); // No need to initialize with `{}`
 const StoreContextProvider = ({ children }) => {
   // State to track cart items
   const [cartItems, setCartItems] = useState({});
+  const url = "http://localhost:4000";
+  const [token, setToken] = useState("");
 
   // Function to add an item to the cart
   const addToCart = (itemId) => {
@@ -48,6 +50,9 @@ const StoreContextProvider = ({ children }) => {
     addToCart,
     removeFromCart,
     getTotalCartAmount,
+    url,
+    token,
+    setToken,
   };
 
   return (
