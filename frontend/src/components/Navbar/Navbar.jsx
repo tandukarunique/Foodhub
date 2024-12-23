@@ -2,13 +2,26 @@ import React, { useContext, useState } from "react";
 import "./Navbar.css";
 import logo from "../../assets/assests/logo.png";
 import searchicon from "../../assets/assests/searchicon.jpg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { IoIosLogOut } from "react-icons/io";
+import { IoBagOutline } from "react-icons/io5";
 
 import { CiShoppingBasket } from "react-icons/ci";
 import { StoreContext } from "../../context/StoreContext";
+// import { assests } from "../../assets/assests";
+import { FaRegUser } from "react-icons/fa";
+
 const Navbar = ({ setShowLogin }) => {
   const [menu, setmenu] = useState("menu");
   const { getTotalCartAmount, token, setToken } = useContext(StoreContext);
+  const navigate = useNavigate()
+
+  const logout = () => {
+    localStorage.removeItem("token")
+    setToken("")
+    navigate("/")
+
+  };
   return (
     <div className="navbar">
       <Link to="/">
@@ -72,7 +85,20 @@ const Navbar = ({ setShowLogin }) => {
         {!token ? (
           <button onClick={() => setShowLogin(true)}>Sign in</button>
         ) : (
-          <div></div>
+          <div className="navbar-profile">
+            <FaRegUser />
+            <ul className="nav-profile-dropdown">
+              <li>
+                <IoBagOutline />
+                <p>Orders</p>
+              </li>
+              <hr />
+              <li onClick={logout}>
+                <IoIosLogOut />
+                <p>Logout</p>
+              </li>
+            </ul>
+          </div>
         )}
       </div>
     </div>
