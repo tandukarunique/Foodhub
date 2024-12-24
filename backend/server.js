@@ -3,8 +3,8 @@ import cors from "cors";
 import { connectDB } from "./config/db.js";
 import foodRouter from "./routes/foodRoute.js";
 import userRouter from "./routes/userRoute.js";
-import 'dotenv/config'
-
+import "dotenv/config";
+import cartRouter from "./routes/cartRoute.js";
 
 //app config
 const app = express();
@@ -15,18 +15,29 @@ app.use(express.json());
 app.use(cors());
 
 //db connection
-connectDB();
+const startServer = async () => {
+  try {
+    await connectDB(); // Wait for DB connection
+    console.log("Database connected");
+    // Start listening only after DB connection
+    app.listen(port, () => {
+      console.log(`Server started on http://localhost:${port}`);
+    });
+  } catch (error) {
+    console.error("Failed to connect to the database:", error.message);
+    process.exit(1); // Exit process with failure
+  }
+};
 
 //Api endpoints
 app.use("/api/food", foodRouter);
 app.use("/images", express.static("uploads"));
 app.use("/api/user", userRouter);
+app.use("/api/cart",cartRouter)
 
-//request data from server lai use huncha
+//Default route
 app.get("/", (req, res) => {
-  res.send("Api Working");
+  res.send("API Working");
 });
 
-app.listen(port, () => {
-  console.log(`server started on http://localhost:${port}`);
-});
+startServer();
