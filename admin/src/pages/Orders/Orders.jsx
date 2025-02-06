@@ -4,7 +4,7 @@ import "./Orders.css";
 const Orders = () => {
   return (
     <div>
-      <p>order bhayo</p>
+      <p>This is order page</p>
     </div>
   );
 };
