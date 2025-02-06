@@ -55,6 +55,34 @@
   top: -8px;
   right: -8px;
 }
+.navbar img {
+  height: auto;
+  width: 230px; /* Default width */
+  max-width: 100%;
+  object-fit: contain; /* Ensures it maintains aspect ratio */
+}
+
+/* Tablet screens (768px and below) */
+@media (max-width: 768px) {
+  .navbar img {
+    width: 180px;
+  }
+}
+
+/* Mobile screens (480px and below) */
+@media (max-width: 480px) {
+  .navbar img {
+    width: 150px;
+  }
+}
+
+/* Very small screens (300px and below) */
+@media (max-width: 300px) {
+  .navbar img {
+    width: 120px;
+  }
+}
+
 @media (max-width: 1050px) {
   .navbar .logo {
     width: 130px;
@@ -85,11 +113,30 @@
     gap: 30px;
   }
   .navbar-right img {
-    width: 20px;
+    width: 15px;
   }
   .navbar-right button {
     padding: 7px 20px;
     font-size: 15px;
+  }
+}
+@media (max-width: 500px) {
+  .navbar .logo {
+    width: 50px;
+  }
+  .navbar-menu {
+    gap: 15px;
+    font-size: 16px;
+  }
+  .navbar-right {
+    gap: 30px;
+  }
+  .navbar-right img {
+    width: 10px;
+  }
+  .navbar-right button {
+    padding: 7px 10px;
+    font-size: 10px;
   }
 }
 /* Navbar container styles */
